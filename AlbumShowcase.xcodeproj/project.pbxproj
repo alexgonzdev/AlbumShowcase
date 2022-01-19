@@ -17,6 +17,12 @@
 		F40D505927987091008F627E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40D502F27987090008F627E /* ContentView.swift */; };
 		F40D505A27987091008F627E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F40D503027987091008F627E /* Assets.xcassets */; };
 		F40D505B27987091008F627E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F40D503027987091008F627E /* Assets.xcassets */; };
+		F40D506E279870BA008F627E /* album.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40D506D279870BA008F627E /* album.swift */; };
+		F40D5070279872F2008F627E /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40D506F279872F2008F627E /* CardView.swift */; };
+		F40D507F279895C3008F627E /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40D507E279895C3008F627E /* NetworkManager.swift */; };
+		F40D508127989647008F627E /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40D508027989647008F627E /* APIError.swift */; };
+		F40D508327989778008F627E /* AlbumListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40D508227989778008F627E /* AlbumListViewModel.swift */; };
+		F40D50852798A666008F627E /* AlbumListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40D50842798A666008F627E /* AlbumListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +55,12 @@
 		F40D504E27987091008F627E /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F40D505227987091008F627E /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		F40D505427987091008F627E /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
+		F40D506D279870BA008F627E /* album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = album.swift; sourceTree = "<group>"; };
+		F40D506F279872F2008F627E /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		F40D507E279895C3008F627E /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		F40D508027989647008F627E /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		F40D508227989778008F627E /* AlbumListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListViewModel.swift; sourceTree = "<group>"; };
+		F40D50842798A666008F627E /* AlbumListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +109,10 @@
 		F40D502D27987090008F627E /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				F40D507D279895B6008F627E /* Utilities */,
+				F40D506C2798709E008F627E /* Views */,
+				F40D506B2798709B008F627E /* Models */,
+				F40D506A27987098008F627E /* ViewModels */,
 				F40D502E27987090008F627E /* AlbumShowcaseApp.swift */,
 				F40D502F27987090008F627E /* ContentView.swift */,
 				F40D503027987091008F627E /* Assets.xcassets */,
@@ -139,6 +155,40 @@
 				F40D505427987091008F627E /* Tests_macOSLaunchTests.swift */,
 			);
 			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+		F40D506A27987098008F627E /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				F40D508227989778008F627E /* AlbumListViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		F40D506B2798709B008F627E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F40D506D279870BA008F627E /* album.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F40D506C2798709E008F627E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F40D506F279872F2008F627E /* CardView.swift */,
+				F40D50842798A666008F627E /* AlbumListView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F40D507D279895B6008F627E /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				F40D507E279895C3008F627E /* NetworkManager.swift */,
+				F40D508027989647008F627E /* APIError.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,8 +349,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F40D506E279870BA008F627E /* album.swift in Sources */,
 				F40D505827987091008F627E /* ContentView.swift in Sources */,
+				F40D507F279895C3008F627E /* NetworkManager.swift in Sources */,
+				F40D508327989778008F627E /* AlbumListViewModel.swift in Sources */,
+				F40D5070279872F2008F627E /* CardView.swift in Sources */,
 				F40D505627987091008F627E /* AlbumShowcaseApp.swift in Sources */,
+				F40D50852798A666008F627E /* AlbumListView.swift in Sources */,
+				F40D508127989647008F627E /* APIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
