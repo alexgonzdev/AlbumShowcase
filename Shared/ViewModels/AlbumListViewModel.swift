@@ -23,13 +23,14 @@ final class AlbumListViewModel: ObservableObject {
                 case .failure(let error):
                     switch error {
                     case .invalidURL:
-                        print("")
+                            // these 4 should handle the errors with preferably an alert but I got a sleep disorder called narcolepsy and it's late so i don't want to fall asleep before uploading it, therefore i'm pushing it like this, apologies for that
+                        print("There is an error trying to reach the server. If this persists, please contact support.")
                     case .invalidData:
-                        print("")
+                        print("Unable to complete your request at this time. Please check your internet connection.")
                     case .invalidResponse:
-                        print("")
+                        print("Invalid response from the server. Please try again or contact support.")
                     case .unableToComplete:
-                        print("")
+                        print("The data received from the server was invalid. Please try again or contact support.")
                     }
                 }
             }

@@ -9,7 +9,7 @@ import UIKit
 
 class NetworkManager: NSObject {
     
-    static let shared           = NetworkManager()
+    static let shared = NetworkManager()
     
    
     

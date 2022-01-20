@@ -83,36 +83,4 @@ enum Kind: String, Codable {
 
 
 
-enum FetchError: Error {
-    case noURL
-}
-func fetchAlbums() async throws -> [Album] {
-    
-    
-    guard let url = URL(string: "https://rss.applemarketingtools.com/api/v2/us/music/most-played/50/albums.json") else { throw FetchError.noURL }
-    let request = URLRequest(url: url)
-    let (data, _) = try await URLSession.shared.data(for: request)
-    let parsedJSON = try JSONDecoder().decode(Welcome.self, from: data)
-    
-    
-    var fetchedAlbums = [Album]()
-        
-    for album in parsedJSON.feed.results {
-        
-        fetchedAlbums.append(album)
-            
-        }
-    
-   
-    
-    
-    return fetchedAlbums
-}
-/*
-func doRegularWork() {
-    Task {
-        try? await fetchAlbums()
-    }
-}
-doRegularWork()
-*/
+

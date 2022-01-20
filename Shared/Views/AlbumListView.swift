@@ -24,6 +24,8 @@ struct AlbumListView: View {
                 ScrollView {
                 ForEach(viewModel.albums) { album in
                     CardView(album: album)
+                    
+                    
                 }
                 }
                 .navigationTitle("Top 50 Albums").foregroundColor(.white)
